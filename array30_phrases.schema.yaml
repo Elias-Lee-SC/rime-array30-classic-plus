@@ -1,0 +1,26 @@
+# array30_phrases.schema.yaml
+# encoding: utf-8
+#
+# Auxiliary schema for compiling the fixed-order built-in phrase dictionary.
+
+__include: array30.schema:/
+
+schema:
+  schema_id: array30_phrases
+  name: "行列30內建詞組"
+  version: "1.0"
+  author:
+    - "Terry Tsang <archerindigo@gmail.com>"
+  description: |
+    行列30內建詞組固定序詞典，供 array30 的 fixed_phrases translator 使用。
+  dependencies:
+    - array30_wsymbols
+    - luna_quanpin
+
+translator:
+  dictionary: array30_phrases
+  prism: array30_phrases
+  enable_charset_filter: true
+  enable_completion: true
+  enable_sentence: false
+  enable_user_dict: false

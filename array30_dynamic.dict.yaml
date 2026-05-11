@@ -1,0 +1,31 @@
+# array30_dynamic.dict.yaml
+# vim: set tabstop=8 noet:
+# encoding: utf-8
+#
+# Dynamic-learning dictionary for array30's main translator.
+# It intentionally excludes array30_phrases so built-in phrases are emitted only
+# by table_translator@fixed_phrases with fixed order.
+
+---
+name: "array30_dynamic"
+version: "2.0"
+sort: original
+use_preset_vocabulary: false
+max_phrase_length: 5
+import_tables:
+  - array30_main
+  - array30_emoji
+encoder:
+  exclude_patterns:
+    - '^.*!$'
+    - '^.*@$'
+  rules:
+    - length_equal: 2
+      formula: "AaAbAcAdBaBbBcBd"
+    - length_equal: 3
+      formula: "AaAbAcAdBaBbBcBdCaCbCcCd"
+    - length_equal: 4
+      formula: "AaAbAcAdBaBbBcBdCaCbCcCdDaDbDcDd"
+    - length_equal: 5
+      formula: "AaAbAcAdBaBbBcBdCaCbCcCdDaDbDcDdEaEbEcEd"
+...

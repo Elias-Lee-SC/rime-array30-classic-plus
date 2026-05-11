@@ -1,0 +1,680 @@
+# squirrel.custom.yaml
+
+patch:
+  app_options/+:
+    com.wolfram.Mathematica:
+      ascii_mode: true
+    com.tencent.qq:
+      no_inline: true
+
+  keyboard_layout: USExtended
+
+  style:
+    candidate_format: "[label] [candidate]  [comment]"
+    font_face: "SourceSans3VF-Roman, SourceHanSansKVF-Light, SourceHanSansVF-Light, SourceHanSansTCVF-Light, SourceHanSansSCVF-Light, PlangothicP1, PlangothicP2"
+#    label_font_face: "ChMathSymbol-Light, SourceSans3Roman-Light"
+    font_point: 20
+    comment_font_point: 18
+    label_font_point: 20
+    border_height: -5
+    border_width: -5
+    mutual_exclusive: false
+    memorize_size: false
+    inline_preedit: true  # true不內嵌編碼，false內嵌
+    inline_candidate: false # true，打字時中途不顯示編碼，打完整後顯示漢字；false，一邊打字一邊實時顯示行列編碼
+    candidate_list_layout: stacked # stacked(候選字並列部局)    | linear（候選字緊湊部局）
+    text_orientation: horizontal     # horizontal | vertical
+    corner_radius: 16                # 輸入框圓角
+    hilited_corner_radius: 13        # 候選字框圓角
+    # surrounding_extra_expansion: -3
+    line_spacing: 7           # 行間距
+    base_offset: 0
+    spacing: 5
+    show_paging: false
+    translucency: false        # 框體是否透明，true為透明，false為不透明
+    alpha: 1e+0               # 框體透明度，0-1
+    shadow_size: 8.0          # 候選框光暈
+    color_scheme: ruijie
+    color_scheme_dark: synthWave'84
+
+  preset_color_schemes/+:
+    solarized-dark:
+      name: "曬經・月／Solarized Dark"
+      author: "based on Aben's 曬經石／solarized_rock,  original artwork by ethanschoonover's solarized"
+      hilited_corner_radius: 0        # 候選字框圓角
+      color_space: display_p3
+      back_color: 0x66352A0A                  #Lab 15 ,-12,-12
+      border_color: 0x2A1F00                  #Lab 10 ,-12,-12
+      preedit_back_color: 0xD7E8ED            #Lab 92 , 0 , 10
+      candidate_text_color: 0x7389FF          #Lab 75 , 65, 45
+      label_color: 0x478DF4                   #Lab 70 , 45, 65
+      comment_text_color: 0xC38AFF            #Lab 75 , 65,-5
+      text_color: 0x756E5D                    #Lab 45 ,-7 ,-7
+      hilited_back_color: 0xC9DADF            #Lab 87 , 0 , 10
+      hilited_candidate_back_color: 0x403516  #Lab 20 ,-12,-12
+      hilited_candidate_text_color: 0x989F52  #Lab 60 ,-35,-5
+      hilited_candidate_label_color: 0xCC8947 #Lab 55 ,-10,-45
+      hilited_comment_text_color: 0x289989    #Lab 60 ,-20, 65
+      hilited_text_color: 0xBE706D            #Lab 50 , 15,-45
+
+    solarized-light:
+      name: "曬經・日／Solarized Light"
+      author: "based on Aben's 曬經石／solarized_rock,  original artwork by ethanschoonover's solarized"
+      color_space: display_p3
+      back_color: 0x66E5F6FB                  #Lab 97 , 0 , 10
+      border_color: 0xEDFFFF                  #Lab 100, 0 , 10
+      preedit_back_color: 0x403516            #Lab 20 ,-12,-12
+      candidate_text_color: 0x595E00          #Lab 35 ,-35,-5
+      label_color: 0xA36407                   #Lab 40 ,-10,-45
+      alpha: 1                            # 框體透明度，0-1
+      comment_text_color: 0x005947            #Lab 35 ,-20, 65
+      text_color: 0xA1A095                    #Lab 65 ,-5 ,-2
+      hilited_back_color: 0x4C4022            #Lab 25 ,-12,-12
+      hilited_candidate_back_color: 0xD7E8ED  #Lab 92 , 0 , 10
+      hilited_candidate_text_color: 0x3942CB  #Lab 50 , 65, 45
+      hilited_candidate_label_color: 0x2566C6 #Lab 55 , 45, 65
+      hilited_comment_text_color: 0x8144C2    #Lab 50 , 65,-5
+      hilited_text_color: 0x2C8BAE            #Lab 60 , 10, 65
+
+    new:
+      name: 新皮肤
+      author: Elias
+      back_color: 0xFF272323
+      border_color: 0xFF2AF349
+      text_color: 0xFFE3E3E3
+      comment_text_color: 0xFFD130D2
+      label_color: 0xFFEBFF01
+      shadow_color: 0xFF323131
+      hilited_text_color: 0xFFE3E3E3
+      hilited_back_color: 0xFF332423
+      hilited_shadow_color: 0xFF323131
+      hilited_candidate_text_color: 0xFFFFFFFF
+      hilited_candidate_back_color: 0xFFD15901
+      hilited_candidate_shadow_color: 0xCC96DE14
+      hilited_candidate_border_color: 0xD92CCCC1
+      hilited_label_color: 0xFF00FFF2
+      hilited_mark_color: 0xFFFFCAAC
+      hilited_comment_text_color: 0xFF39FF00
+      candidate_text_color: 0xFFEEEEEE
+      candidate_back_color: 0xFF312423
+      candidate_shadow_color: 0xD92CCCC1
+
+    jornal-antigo:
+      name: 舊報紙／Jornal Antigo
+      author: Elias
+      color_space: srgb
+      hilited_corner_radius: 0        # 候選字框圓角
+      back_color: '0xF0FCFF'
+      hilited_candidate_back_color: '0xE5F0F2'
+      text_color: '0x0F0F10'
+      hilited_text_color: '0xDBECDB'
+      candidate_text_color: '0x3D3F44'
+      hilited_candidate_text_color: '0x7B8324'
+      comment_text_color: '0xC69664'
+      hilited_candidate_label_color: 0x7B8324 # 第一候選項編號顏色
+      label_color: 0x3D3F44                  # 其餘項編號顏色
+
+    harvest-moon:
+      name: "牧場物語／Harvest Moon"
+      author: "Elias"
+      alpha: 0.98
+      back_color: 0xF5FDFE
+      candidate_text_color: 0x46617D
+      comment_text_color: 0x727EF9
+      label_color: 0x727EF9
+      hilited_candidate_back_color: 0xFFFFFF
+      hilited_candidate_text_color: 0xBBBC2E
+      hilited_comment_text_color: 0xBBBC2E
+      hilited_candidate_label_color: 0xBBBC2E
+      text_color: 0x3FFFFFFF
+      hilited_text_color: 0xC5D360
+
+    cyberpunk-2077:
+      name: "賽博朋克 2077／Cyberpunk 2077"
+      author: "Elias"
+      font_face: "MingLan"
+      font_point: 20
+      translucency: true
+      color_space: srgb
+      back_color: 0x1F1F1F
+      candidate_text_color: 0xA9A23B
+      comment_text_color: 0x454CED
+      label_color: 0x292ED2
+      hilited_candidate_back_color: 0x41D8FF
+      hilited_candidate_text_color: 0x041661
+      hilited_comment_text_color: 0xBBBC2E
+      hilited_candidate_label_color: 0xBBBC2E
+      text_color: 0x3FFFFFFF
+      hilited_text_color: 0xDED636
+
+    simple_branco:
+      name: "簡約白／Simple_Branco"
+      author: "Elias"
+      color_space: srgb
+      back_color: 0xeeeeee
+      candidate_text_color: 0x000000
+      comment_text_color: 0x808080
+      label_color: 0x888888
+      hilited_candidate_back_color: 0xeeeeee
+      hilited_candidate_text_color: 0xc98915
+      hilited_comment_text_color: 0xa0c98915
+      hilited_candidate_label_color: 0xa0c98915
+      text_color: 0x808080
+      hilited_text_color: 0x000000
+
+    zhihu_white:
+      name: 知乎白／zhihu_white
+      author: 空山明月 <sqqlove123@163.com>
+      hilited_corner_radius: 0        # 候選字框圓角
+      text_color: 0x573130
+      back_color: 0xFCFEFC
+      border_color: 0x000000
+      candidate_back_color: 0xFCFEFC
+      comment_text_color: 0x3D4DC6
+      hilited_comment_text_color: 0xFCFEFC        # 高亮區提示符顏色
+      label_color: 0xD97700
+      hilited_label_color: 0x000000
+      hilited_mark_color: 0x3340D6
+      hilited_text_color: 0x3340D6
+      hilited_back_color: 0xFCFEFC
+      hilited_candidate_label_color: 0xFCFEFC     # 高亮區序號顏色
+      hilited_candidate_text_color: 0xFCFEFC      # 高亮區文字顏色
+      hilited_candidate_back_color: 0xD97700
+      shadow_color: 0x6b000000
+      hilited_shadow_color: 0x6b000000  
+      # hilited_candidate_border_color: 0xBEF6FF
+      hilited_candidate_shadow_color: 0x6b000000
+
+    WeType-light:                                   # 微信鍵盤風格光
+      name: WeType-light
+      author: Elias.Lee
+      text_color: 0xFFFFFF             # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
+      candidate_text_color: 0x000000   # 候選項文字顏色，當與文字顏色不同時指定
+      comment_text_color: 0x79af22   # 候選字提示符顏色
+      hilited_text_color: 0x89BE3F     # 高亮文字，即與當前高亮候選對應的那部份輸入碼
+      # hilited_back_color: 0x7E7969     # 設定高亮文字的底色，可起到凸顯高亮部份的作用
+      hilited_candidate_text_color: 0xFFFFFF  # 高亮候選項的文字顏色，要醒目！
+      hilited_candidate_back_color: 0x89BE3F  # 高亮候選項的底色，若與背景色不同就會顯出光棒
+      hilited_comment_text_color: 0xFFFFFF    # 候選項註字色
+      hilited_candidate_label_color: 0xFFFFFF # 第一候選項編號顏色
+      label_color: 0x89BE3F                   # 其餘項編號顏色
+      hilited_candidate_back_color: 0x79af22  # 選中底色
+
+    WeType-dark:                                   # 微信鍵盤風格闇
+      name: WeType-dark
+      author: Elias.Lee
+      text_color: 0xFFFFFF             # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
+      back_color: 0xB7BCC3
+      candidate_text_color: 0x000000   # 候選項文字顏色，當與文字顏色不同時指定
+      comment_text_color: 0x8FA401   # 候選字提示符顏色OK
+      hilited_text_color: 0x0c986e     # 高亮文字，即與當前高亮候選對應的那部份輸入碼
+      # hilited_back_color: 0x7E7969     # 設定高亮文字的底色，可起到凸顯高亮部份的作用
+      hilited_candidate_text_color: 0xFFFFFF  # 高亮候選項的文字顏色，要醒目！
+      hilited_candidate_back_color: 0x0c986e  # 高亮候選項的底色，若與背景色不同就會顯出光棒
+      hilited_comment_text_color: 0xFFFFFF    # 候選項註字色
+      hilited_candidate_label_color: 0xFFFFFF # 第一候選項編號顏色
+      label_color: 0x8FA401                   # 其餘項編號顏色
+      hilited_candidate_back_color: 0x8FA401  # 選中底色OK
+
+    ruijie:
+      name: ruijie
+      author: Elias
+      color_space: srgb
+      hilited_corner_radius: 0        # 候選字框圓角
+      back_color: '0xFFFEFF'
+      hilited_back_color: '0xFAFAFA'
+      hilited_candidate_back_color: '0xF5F8EA'
+      text_color: '0x3145FD'
+      hilited_text_color: '0x000000'
+      candidate_text_color: '0xE1BC01'
+      hilited_candidate_text_color: '0xA2C14B'
+      label_color: '0xE1BC01'
+      hilited_candidate_label_color: '0xA2C14B'
+      hilited_comment_text_color: '0xA2C14B'     # 高亮註解文字顏色
+      comment_text_color: '0xE1BC01'
+
+
+    WhatsApp-dark:
+      name: "WhatsApp-dark"
+      candidate_list_layout: stacked
+      text_orientation: horizontal
+      inline_preedit: true
+      translucency: true
+      hilited_corner_radius: 0        # 候選字框圓角
+      # border_height: 3.0
+      # border_width: 3.0
+      spacing: 4.0
+      alpha: 0.98
+      shadow_size: 8.0
+      color_space: srgb
+      back_color: 0x1D1F1F
+      border_color: 0x3E4A29
+      candidate_text_color: 0xFAFAFA
+      comment_text_color: 0x63C023
+      label_color: 0x63C023
+      hilited_candidate_back_color: 0x29350F
+      hilited_candidate_text_color: 0xD4FDD9
+      hilited_comment_text_color: 0xD4FDD9
+      hilited_candidate_label_color: 0xD4FDD9
+      text_color: 0x66D324
+      hilited_text_color: 0xA5A5A5
+
+    WhatsApp-light:
+      name: "WhatsApp-light"
+      candidate_list_layout: stacked
+      text_orientation: horizontal
+      inline_preedit: true
+      translucency: true
+      # border_height: 3.0
+      # border_width: 3.0
+      spacing: 4.0
+      alpha: 0.98
+      shadow_size: 8.0
+      color_space: srgb
+      color_space: srgb
+      back_color: 0xFFFFFF
+      candidate_text_color: 0x16130E
+      comment_text_color: 0x60AA1E
+      label_color: 0x61AA1E
+      hilited_candidate_back_color: 0xD2FDD8
+      hilited_candidate_text_color: 0x3F6015
+      hilited_comment_text_color: 0xF37D11
+      hilited_candidate_label_color: 0xF37D11
+      text_color: 0x62AC1C
+      hilited_text_color: 0x3F6015
+
+    Fuligem:
+      name: "Fuligem"
+      # font_point: 22
+      # comment_font_point: 20
+      # line_spacing: 3
+      candidate_list_layout: stacked
+      text_orientation: horizontal
+      inline_preedit: false                   # false:編碼出現在文字框內；true:編碼以漢字形式出現在文字框外
+      translucency: true
+      border_width: 6.0
+      shadow_size: 10.0
+      shadow_color: 0x4ccdcdcd
+      color_space: srgb
+      back_color: 0xE4E4E4
+      candidate_text_color: 0x020202
+      comment_text_color: 0x080808
+      label_color: 0x020202
+      hilited_candidate_back_color: 0x000000
+      hilited_candidate_text_color: 0xFFFFFF
+      hilited_comment_text_color: 0xE4E4E4
+      hilited_candidate_label_color: 0xE4E4E4
+      preedit_back_color: 0xE4E4E4
+      text_color: 0x080808
+      hilited_text_color: 0x000000
+
+    Notion:
+      name: Notion
+      author: Elias.Lee
+      back_color: 0xF4F5F6
+      candidate_text_color: 0x000000
+      comment_text_color: 0xCF840B
+      label_color: 0xCF840B
+      hilited_candidate_back_color: 0xCF840B
+      hilited_candidate_text_color: 0xFFFFFF
+      hilited_comment_text_color: 0xF4F5F6
+      hilited_candidate_label_color: 0xFFFFFF
+      shadow_color: 0x4ccdcdcd      # 陰影顏色，不知有沒有用
+      hilited_shadow_color: 0x4ccdcdcd  # 高亮編碼陰影，不知有沒有用
+      hilited_candidate_shadow_color: 0x4ccdcdcd  # 高亮候選陰影，不知有沒有用
+
+    butter:
+      name: 奶油／butter
+      author: 空山明月 <sqqlove123@163.com>
+      back_color: 0xCAFDFF
+      border_color: 0x535C5C
+      text_color: 0x535C5C
+      hilited_text_color: 0xD3F0F0
+      hilited_back_color: 0xB1B2B2
+      hilited_candidate_text_color: 0xCAFDFF
+      hilited_candidate_back_color: 0xB1B2B2
+      candidate_text_color: 0x535C5C
+      comment_text_color: 0x8B9090
+
+    pronhub:
+      name: pronhub
+      back_color: 0x000000
+      label_color: 0xffffff
+      border_color: 0x000000
+      text_color: 0xffffff
+      hilited_text_color: 0x000000
+      hilited_back_color: 0x009bff
+      candidate_text_color: 0xffffff
+      hilited_candidate_text_color: 0x000000
+      hilited_candidate_back_color: 0x009bff
+      comment_text_color: 0xB4C4CB
+      hilited_lable_color: 0x000000
+      hilited_comment_text_color: 0x000000
+
+    cool_breeze:                                                # 淺藍白清爽風格，適合白天用
+      author: "skoj <skoj@qq.com>"
+      back_color: 0xFFFBFB
+      border_color: 0xFFAAAA
+      candidate_text_color: 0x009100
+      hilited_back_color: 0xFFFBFB
+      hilited_candidate_back_color: 0xFFD6AC
+      hilited_candidate_text_color: 0x6F003A
+      hilited_text_color: 0x0000CE
+      name: "清風／Cool Breeze"
+      text_color: 0x0000FF
+
+    dark_temple:                                                # Ubantu風格
+      author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+      back_color: 0x222222
+      border_color: 0x222222
+      candidate_text_color: 0xd8e3e6
+      comment_text_color: 0x606cff
+      hilited_back_color: 0x222222
+      hilited_candidate_back_color: 0x333333
+      hilited_candidate_text_color: 0x92f6da
+      hilited_text_color: 0xffcf9a
+      name: "暗堂／Dark Temple"
+      text_color: 0x92f6da
+
+    doraemon:                                                    # 機器貓藍白配色，適合白天用
+      author: "Patricivs <ipatrickmac@me.com>"
+      back_color: 0xffffff
+      border_color: 0xe89f00
+      candidate_text_color: 0xe89f00
+      comment_text_color: 0xe89f00
+      hilited_back_color: 0x1200e5
+      hilited_candidate_back_color: 0xe89f00
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0xffffff
+      hilited_text_color: 0xffffff
+      label_color: 0xe89f00
+      name: "銅鑼衛門／Doraemon"
+      text_color: 0x1200e5
+
+    google_plus:
+      author: "Patricivs <ipatrickmac@me.com>"
+      back_color: 0xffffff
+      border_color: 0x394bdd
+      candidate_text_color: 0x394bdd
+      comment_text_color: 0xcac9c8
+      hilited_back_color: 0xffffff
+      hilited_candidate_back_color: 0x394bdd
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0xffffff
+      hilited_text_color: 0x394bdd
+      label_color: 0xcac9c8
+      name: "Google+"
+      text_color: 0xcac9c8
+
+    kuon:                                       # 白綠水清新，適合白天用
+      author: "Patricivs <ipatrickmac@me.com>"
+      back_color: 0x70b33e
+      border_color: 0x70b33e
+      candidate_text_color: 0xffffff
+      comment_text_color: 0xffffff
+      hilited_back_color: 0xffffff
+      hilited_candidate_back_color: 0xffffff
+      hilited_candidate_text_color: 0x70b33e
+      hilited_comment_text_color: 0x70b33e
+      hilited_text_color: 0x70b33e
+      label_color: 0xffffff
+      name: "琨／Kuon"
+      text_color: 0xffffff
+
+    lost_temple:                                # 綠灰配色，比較典雅、耐看，白天夜晚都適合
+      author: "佛振 <chen.sst@gmail.com>, based on ir_black"
+      back_color: 0x444444
+      border_color: 0x444444
+      hilited_back_color: 0x222222
+      hilited_candidate_back_color: 0x82e6ca
+      hilited_candidate_text_color: 0x000000
+      hilited_text_color: 0x82e6ca
+      name: "孤寺／Lost Temple"
+      text_color: 0xe8f3f6
+
+    lost_temple_2:
+      name: 孤寺／Lost Temple
+      author: 佛振 <chen.sst@gmail.com>, based on ir_black
+      hilited_corner_radius: 0        # 候選字框圓角
+      color_space: srgb
+      back_color: '0xEE303030'
+      hilited_candidate_back_color: '0x82E6CA'
+      text_color: '0xE8F3F6'
+      hilited_text_color: '0x82E6CA'
+      hilited_candidate_text_color: '0x000000'
+      comment_text_color: '0xBB82E6CA'
+      hilited_comment_text_color: '0xBB203D34'
+
+    psionics:
+      author: "雨過之後、佛振"
+      back_color: 0x444444
+      border_color: 0x444444
+      candidate_text_color: 0xeeeeee
+      comment_text_color: 0x808080
+      hilited_back_color: 0x444444
+      hilited_candidate_back_color: 0xd8bf00
+      hilited_candidate_label_color: 0xfafafa
+      hilited_candidate_text_color: 0xfafafa
+      hilited_comment_text_color: 0x444444
+      hilited_text_color: 0xeeeeee
+      name: "幽能／Psionics"
+      text_color: 0xc2c2c2
+
+    so_young:                                # 綠白清爽風格，更適合白天用
+      author: "五磅兔 <zcunlin@foxmail.com>"
+      inline_preedit: true
+      back_color: 0xe3f6fd
+      border_color: 0xd5e8ee
+      candidate_text_color: 0x837b65
+      comment_text_color: 0xd28b26
+      hilited_back_color: 0xd5e8ee
+      hilited_candidate_back_color: 0x98a12a
+      hilited_candidate_text_color: 0xd5e8ee
+      hilited_comment_text_color: 0xd5e8ee
+      hilited_text_color: 0x969483
+      label_color: 0xa1a193
+      name: "致青春／So Young"
+      text_color: 0x8236d3
+
+    youtube:
+      author: "Patricivs <ipatrickmac@me.com>"
+      back_color: 0xdedede
+      border_color: 0xdedede
+      candidate_text_color: 0x000000
+      comment_text_color: 0x000000
+      hilited_back_color: 0xffffff
+      hilited_candidate_back_color: 0x230dc3
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0xffffff
+      hilited_text_color: 0x230dc3
+      label_color: 0x000000
+      name: YouTube
+      text_color: 0x000000
+
+    roc:
+      author: "Patricivs ipatrickmac@me.com"
+      back_color: 0x3300e6
+      border_color: 0x3300e6
+      candidate_text_color: 0xffffff
+      comment_text_color: 0xffffff
+      hilited_back_color: 0xffffff
+      hilited_candidate_back_color: 0xa2501e
+      hilited_candidate_text_color: 0xffffff
+      hilited_comment_text_color: 0xffffff
+      hilited_text_color: 0x3300e6
+      label_color: 0xffffff
+      name: "青天白日滿地紅／RoC"
+      text_color: 0xffffff
+
+    github:
+      name: "github"
+      author: "yzlnew"
+      inline_preedit: true                    # 單行顯示，false雙行顯示
+      candidate_format: "%c\u2005%@\u2005"    # 編號 %c 和候選詞 %@ 前後的空間
+      border_color: 0xe7e2dd                  # 邊框色
+      back_color: 0xFAF8F7
+      candidate_text_color: 0x6E6259
+      comment_text_color: 0xA47136
+      label_color: 0x6E6259
+      hilited_candidate_back_color: 0xF0EEEC
+      hilited_candidate_text_color: 0xA47136
+      hilited_comment_text_color: 0xA362EE
+      hilited_candidate_label_color: 0xA362EE
+      text_color: 0xDA690A
+      hilited_text_color: 0x7D4BF2
+
+    bilibili-light:
+      name: "嗶哩嗶哩・日／Bilibili Light"  # 皮膚名稱
+      author: "Elias.Lee"                    # 作者名稱
+      back_color: 0xFFFFFF                    # 背景顏色
+      candidate_text_color: 0x817F7E         # 候選文字顏色
+      comment_text_color: 0xB0A8F0           # 註解文字顏色
+      label_color: 0xB0A8F0                  # 標籤顏色
+      hilited_candidate_back_color: 0xB0A8F0  # 高亮區背景色
+      hilited_text_color: 0xFFFFFF              # 高亮區文字顏色
+      hilited_candidate_text_color: 0xFFFFFF   # 高亮區候選文字顏色
+      hilited_comment_text_color: 0xFFFFFF     # 高亮註解文字顏色
+      hilited_candidate_label_color: 0xFFFFFF   # 高亮候選標籤顏色
+      text_color: 0xB0A8F0                    # 文字顏色
+      alpha: 1                                  # 透明度，0為全透明，1為不透明
+
+    synthWave'84:
+      name: "SynthWave'84"
+      author: "Elias.Lee"
+      back_color: 0x352325
+      candidate_text_color: 0xBD8B84
+      comment_text_color: 0xCF840B
+      label_color: 0x727EF9
+      hilited_candidate_back_color: 0x727EF9
+      hilited_candidate_text_color: 0x880088
+      hilited_comment_text_color: 0x880087
+      hilited_candidate_label_color: 0x880087
+      text_color: 0x3FFFFFFF
+      hilited_text_color: 0x870087
+
+    retro_orange:
+      name: 琥珀色熒光屏
+      author: 佛振 <chen.sst@gmail.com>
+      color_space: srgb
+      back_color: '0x000000'
+      hilited_candidate_back_color: '0x0093FF'
+      border_color: '0x0093FF'
+      text_color: '0x0093FF'
+      hilited_candidate_text_color: '0x000000'
+      label_color: '0x0093FF'
+      hilited_candidate_label_color: '0x000000'
+      corner_radius: 1.6e+1
+      border_height: 2e+0
+      border_width: 2e+0
+
+    Tahoe-dark:
+      name: 太浩湖
+      author: Elias.Lee
+      color_space: srgb
+      back_color: '0xFFFFFF'
+      hilited_back_color: '0xFFFFFF'
+      hilited_candidate_back_color: '0xFC7800'
+      border_color: '0xE2E2E2'
+      text_color: '0xFC7801'
+      hilited_text_color: '0x000000'
+      candidate_text_color: '0x000000'
+      hilited_candidate_text_color: '0xFFFFFF'
+      label_color: '0x0080FF'
+      hilited_candidate_label_color: '0xFFFFFF'
+      comment_text_color: '0x6C6E6B'
+      hilited_comment_text_color: '0xFFFFFF'
+      translucency: true
+      alpha: 9.8e-1
+
+    eawheel:
+      name: EAWheel
+      author: Elias
+      color_space: srgb
+      back_color: '0xFFFFFF'
+      hilited_back_color: '0x444444'
+      hilited_candidate_back_color: '0x581F59'
+      text_color: '0x4C860C'
+      hilited_text_color: '0x01B9FC'
+      candidate_text_color: '0x581F59'
+      hilited_candidate_text_color: '0x01B9FC'
+      comment_text_color: '0x5C149F'
+      hilited_candidate_label_color: 0x01B9FC # 第一候選項編號顏色
+      label_color: 0x581F59                   # 其餘項編號顏色
+      candidate_list_layout: stacked
+      text_orientation: horizontal
+      inline_preedit: true
+      inline_candidate: false
+      translucency: false
+      mutual_exclusive: false
+      memorize_size: true
+      showPaging: false
+      alpha: 1e+0
+      corner_radius: 7e+0
+      hilited_corner_radius: 0e+0
+      border_height: -2e+0
+      border_width: -2e+0
+      line_spacing: 5e+0
+      spacing: 8e+0
+      color_scheme: native
+
+    switch-red:
+      name: Nentendo Switch Red
+      author: Elias
+      color_space: srgb
+      back_color: '0xFFFEFF'
+      hilited_back_color: '0xFAFAFA'
+      hilited_candidate_back_color: '0x2F43F5'
+      text_color: '0xE1BC00'
+      hilited_text_color: '0x000000'
+      candidate_text_color: '0xE1BC00'
+      hilited_candidate_text_color: '0xEEEEEE'
+      comment_text_color: '0x3145FD'
+      hilited_candidate_label_color: '0xEEEEEE' # 第一候選項編號顏色
+      label_color: '0x3145FD'                   # 其餘項編號顏色
+      candidate_list_layout: stacked
+      text_orientation: horizontal
+      inline_preedit: true
+      inline_candidate: false
+      translucency: false
+      mutual_exclusive: false
+      memorize_size: true
+      showPaging: false
+      alpha: 1e+0
+      corner_radius: 7e+0
+      hilited_corner_radius: 0e+0
+      border_height: -2e+0
+      border_width: -2e+0
+      line_spacing: 5e+0
+      spacing: 8e+0
+      color_scheme: native
+
+    switch-blue:
+      name: Nentendo Switch Blue
+      author: Elias
+      color_space: srgb
+      back_color: '0xFFFEFF'
+      hilited_back_color: '0xFAFAFA'
+      hilited_candidate_back_color: '0xE1BC00'
+      text_color: '0x3145FD'
+      hilited_text_color: '0x000000'
+      candidate_text_color: '0x3145FD'
+      hilited_candidate_text_color: '0xEEEEEE'
+      label_color: '0xE1BC01'
+      hilited_candidate_label_color: '0xEEEEEE'
+      comment_text_color: '0xE1BC00'
+      candidate_list_layout: stacked
+      text_orientation: horizontal
+      inline_preedit: true
+      inline_candidate: false
+      translucency: false
+      mutual_exclusive: false
+      memorize_size: true
+      showPaging: false
+      alpha: 1e+0
+      corner_radius: 7e+0
+      hilited_corner_radius: 0e+0
+      border_height: -2e+0
+      border_width: -2e+0
+      line_spacing: 5e+0
+      spacing: 8e+0
+      color_scheme: native

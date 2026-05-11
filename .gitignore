@@ -1,0 +1,21 @@
+# Rime generated build artifacts
+/build/
+
+# Rime user dictionaries and learning data
+*.userdb/
+
+# Local Rime installation and runtime state
+/user.yaml
+/installation.yaml
+
+# LevelDB/runtime files, in case they appear outside *.userdb/
+*.ldb
+*.log
+LOG
+LOG.old
+LOCK
+CURRENT
+MANIFEST-*
+
+# macOS metadata
+.DS_Store

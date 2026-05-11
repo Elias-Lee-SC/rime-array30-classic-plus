@@ -1,0 +1,29 @@
+# array30_char.schema.yaml
+# encoding: utf-8
+#
+# Auxiliary schema for compiling the fixed-order single-character dictionary.
+# It is used by table_translator@character in array30.schema.yaml.
+
+__include: array30.schema:/
+
+schema:
+  schema_id: array30_char
+  name: "行列30單字"
+  version: "2.0"
+  author:
+    - "發明人 廖明德先生"
+    - "Jiehong Ma <ma.jiehong@gmail.com>"
+    - "Terry Tsang <archerindigo@gmail.com>"
+  description: |
+    行列30單字固定序詞典，供 array30 的 character translator 使用。
+  dependencies:
+    - array30_wsymbols
+    - luna_quanpin
+
+translator:
+  dictionary: array30_char
+  prism: array30_char
+  enable_charset_filter: true
+  enable_completion: false
+  enable_sentence: false
+  enable_user_dict: false

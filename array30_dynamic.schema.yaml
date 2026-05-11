@@ -1,0 +1,32 @@
+# array30_dynamic.schema.yaml
+# encoding: utf-8
+#
+# Auxiliary schema for compiling the dictionary used by the dynamic translator.
+
+__include: array30.schema:/
+
+schema:
+  schema_id: array30_dynamic
+  name: "行列30動態連打"
+  version: "2.0"
+  author:
+    - "發明人 廖明德先生"
+    - "Jiehong Ma <ma.jiehong@gmail.com>"
+    - "Terry Tsang <archerindigo@gmail.com>"
+  description: |
+    行列30連打學習詞典，不包含內建詞組碼表。
+  dependencies:
+    - array30_wsymbols
+    - luna_quanpin
+
+translator:
+  dictionary: array30_dynamic
+  prism: array30_dynamic
+  enable_charset_filter: true
+  enable_completion: true
+  enable_encoder: true
+  enable_sentence: true
+  enable_user_dict: true
+  encode_commit_history: true
+  max_phrase_length: 5
+  user_dict: array30
