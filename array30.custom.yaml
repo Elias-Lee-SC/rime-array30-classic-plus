@@ -302,6 +302,7 @@ patch:
       - "Jiehong Ma <ma.jiehong@gmail.com>"
       - "Terry Tsang <archerindigo@gmail.com>"
     dependencies:
+      - array30_query
       - array30_char
       - array30_phrases
       - array30_dynamic

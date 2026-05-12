@@ -14,6 +14,7 @@ schema:
     行列30輸入法
     http://www.array.com.tw/
   dependencies:
+    - array30_query
     - array30_wsymbols
     - luna_quanpin
 

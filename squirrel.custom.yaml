@@ -35,7 +35,7 @@ patch:
     alpha: 1e+0               # 框體透明度，0-1
     shadow_size: 8.0          # 候選框光暈
     color_scheme: ruijie
-    color_scheme_dark: synthWave'84
+    color_scheme_dark: new
 
   preset_color_schemes/+:
     solarized-dark:
