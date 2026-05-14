@@ -7,6 +7,7 @@
 # Local Rime installation and runtime state
 /user.yaml
 /installation.yaml
+/lua/persistent_switches.state
 
 # LevelDB/runtime files, in case they appear outside *.userdb/
 *.ldb

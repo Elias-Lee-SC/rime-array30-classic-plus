@@ -45,3 +45,7 @@ patch:
     hotkeys:
       - "Control+grave"
       # - "F4"
+    save_options:
+      - full_shape
+      - simplification
+      - extended_charset

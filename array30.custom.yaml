@@ -90,6 +90,7 @@ patch:
       - uniquifier
       - "reverse_lookup_filter@reverse_lookup_array30"
     processors:
+      - "lua_processor@*persistent_switches"
       - ascii_composer
       - recognizer
       - key_binder
