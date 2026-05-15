@@ -5,11 +5,17 @@
 # 行列30詞庫
 #
 # 收錄：
-#   - 新行列30輸入法詞庫（共178,399詞）
+#   - 新行列30輸入法詞庫
 #     - https://www.ptt.cc/bbs/Array/M.1627556992.A.8D4.html
 #
-# 製作人員：
+# 碼表原版製作人員：
 #   - Terry Tsang <archerindigo@gmail.com>
+#
+# 碼表修改版製作人員：
+#   - Elias Lee <conan.lim@msn.com>
+#
+# 詞組尾碼，由原生方案的「'」全部換成「j」，以求打字更順手
+# 59512 行開始為自造詞組區
 
 ---
 name: "array30_phrases"
@@ -50738,14 +50744,10 @@ use_preset_vocabulary: false
 風中	x;dj
 台上	x;eaj
 台北	x;eqj
-台北縣	x;euj
-台北市	x;eyj
 台南	x;ffj
-結草	x;ffj
 風吹草動	x;foj
 結石	x;gj
 台啟	x;g.j
-結子	x;gfj
 綢子	x;gfj
 經史子集	x;gkj
 結為	x;h,j
@@ -50760,7 +50762,6 @@ use_preset_vocabulary: false
 給錢	x;ixj
 牆角	x;jj
 結帳	x;jxj
-給人	x;kj
 給假	x;kbj
 結冰	x;kcj
 給付	x;khj
@@ -50828,14 +50829,11 @@ use_preset_vocabulary: false
 結繩	x;xtj
 結綵	x;xvj
 結交	x;y.j
-台語	x;y;j
 結語	x;y;j
-結訓	x;ydj
 台端	x;yej
 結論	x;yfj
 台詞	x;yqj
 結社	x;yrj
-台視	x;ysj
 結親	x;ysj
 結識	x;yxj
 縞衣	x;yxj
@@ -50944,11 +50942,8 @@ use_preset_vocabulary: false
 縱列	xcaej
 經濟政策	xcalj
 網漏吞舟	xcalj
-縱恣	xcanj
 繞梁三日	xcapj
 經濟環境	xcarj
-綜理	xcarj
-線西鄉	xcasj
 綻裂	xcaxj
 約法三章	xcayj
 經濟理論	xcayj
@@ -50998,9 +50993,7 @@ use_preset_vocabulary: false
 綠化	xckqj
 線條	xckvj
 風沙	xclj
-綠竹	xclj
 縱向	xcl;j
-綠島	xcldj
 經濟利益	xclij
 縱然	xcm,j
 風濕性	xcnj
@@ -51052,7 +51045,6 @@ use_preset_vocabulary: false
 線裝書	xcxtj
 經濟絕交	xcxyj
 風涼話	xcyj
-縱言	xcyj
 縱談	xcy,j
 綠褐色	xcyjj
 綠衣人	xcykj

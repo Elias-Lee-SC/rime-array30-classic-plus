@@ -34,8 +34,8 @@ patch:
     translucency: false        # 框體是否透明，true為透明，false為不透明
     alpha: 1e+0               # 框體透明度，0-1
     shadow_size: 8.0          # 候選框光暈
-    color_scheme: ruijie
-    color_scheme_dark: new
+    color_scheme: jornal-antigo
+    color_scheme_dark: psionics
 
   preset_color_schemes/+:
     solarized-dark:
@@ -422,17 +422,6 @@ patch:
       text_color: 0xffffff
 
     lost_temple:                                # 綠灰配色，比較典雅、耐看，白天夜晚都適合
-      author: "佛振 <chen.sst@gmail.com>, based on ir_black"
-      back_color: 0x444444
-      border_color: 0x444444
-      hilited_back_color: 0x222222
-      hilited_candidate_back_color: 0x82e6ca
-      hilited_candidate_text_color: 0x000000
-      hilited_text_color: 0x82e6ca
-      name: "孤寺／Lost Temple"
-      text_color: 0xe8f3f6
-
-    lost_temple_2:
       name: 孤寺／Lost Temple
       author: 佛振 <chen.sst@gmail.com>, based on ir_black
       hilited_corner_radius: 0        # 候選字框圓角
